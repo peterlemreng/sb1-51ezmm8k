@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import { View, StyleSheet } from 'react-native';
-import { Play, Music, Heart, User } from 'lucide-react-native';
+import { Play, Music, Heart, User, Upload } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -39,6 +39,17 @@ export default function TabLayout() {
           tabBarIcon: ({ size, color }) => (
             <View style={styles.iconContainer}>
               <Music size={size} color={color} />
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="upload"
+        options={{
+          title: 'Upload',
+          tabBarIcon: ({ size, color }) => (
+            <View style={styles.iconContainer}>
+              <Upload size={size} color={color} />
             </View>
           ),
         }}
